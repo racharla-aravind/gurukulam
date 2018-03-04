@@ -58,3 +58,6 @@ git clone https://github.com/racharla-aravind/gurukula.git
 ## Postman Collection:
  - Tried to perform API testing from postman for Login and Reset Your Password. But due to cache token and other cookies am not able to send the successful request. Plan is, if this is successful i thought of using the same details in jmeter for load tests.
   - Collection has been placed in the project folder (Gurukula.postman_collection.json)  and also couple of screenshots for browser network logs.
+  
+## Security Test:
+ - Tried sending some javascript code to one of the page elements to verify an end user an perform any illegal actions.  
