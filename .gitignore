@@ -1,0 +1,10 @@
+/target
+/test-output
+/.metadata
+/.settings
+/.classpath
+/dependency-reduced-pom.xml
+/pom
+/.project
+project.iml
+.idea

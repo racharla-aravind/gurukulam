@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.gurukulam</groupId>
+	<artifactId>project</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>project</name>
+	<description>Gurukulam automation project using junit testing framework</description>
+	<url>http://maven.apache.org</url>
+
+
+	<developers>
+		<developer>
+			<name>Aravind Racharla</name>
+			<email>racharlaari@outlook.com</email>
+		</developer>
+	</developers>
+
+	<prerequisites>
+		<maven>3.0.4</maven>
+	</prerequisites>
+
+	<properties>
+		<jdkVersion>1.8</jdkVersion>
+		<mvnEnforcerVersion>1.4.1</mvnEnforcerVersion>
+		<mvnCompilerVersion>3.7.0</mvnCompilerVersion>
+		<surefireVersion>2.20.1</surefireVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<!-- Checks that the version of user's maven installation is 3.0.4, the 
+					JDK is 1.8+, no non-standard repositories are specified in the project, requires 
+					only release versions of dependencies of other artifacts. -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>${mvnEnforcerVersion}</version>
+				<executions>
+					<execution>
+						<id>enforce-versions</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<fail>true</fail>
+							<rules>
+								<requireMavenVersion>
+									<!-- Some plugin features require a recent Maven runtime to work 
+										properly -->
+									<message>Current version of Maven ${maven.version} required to
+										build the project
+										should be ${project.prerequisites.maven}, or
+										higher!
+									</message>
+									<version>[${project.prerequisites.maven},)</version>
+								</requireMavenVersion>
+								<requireJavaVersion>
+									<message>Current JDK version ${java.version} should be
+										${jdkVersion}, or higher!
+									</message>
+									<version>${jdkVersion}</version>
+								</requireJavaVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${mvnCompilerVersion}</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<parallel>classes</parallel>
+					<threadCount>1</threadCount>
+				</configuration>
+				<version>${surefireVersion}</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.9.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.studio</groupId>
+			<artifactId>org.apache.commons.io</artifactId>
+			<version>2.4</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>0.2</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,459 @@
+[0.594][INFO]: COMMAND InitSession {
+   "capabilities": {
+      "desiredCapabilities": {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--log-level=3", "test-type", "star-maximized" ],
+            "extensions": [  ]
+         }
+      },
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--log-level=3", "test-type", "star-maximized" ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--log-level=3", "test-type", "star-maximized" ],
+         "extensions": [  ]
+      }
+   }
+}
+[0.597][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "show_welcome_page": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[0.597][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[0.601][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-background-networking --disable-browser-side-navigation --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-web-resources --enable-automation --enable-logging --force-fieldtrials=SiteIsolationExtensions/Control --ignore-certificate-errors --load-extension=/var/folders/5g/x7dkx80s0ld9g46drv7n3v98nzmxpb/T/.org.chromium.Chromium.opMTwS/internal --log-level=3 --metrics-recording-only --no-first-run --password-store=basic --remote-debugging-port=12606 --safebrowsing-disable-auto-update --star-maximized --test-type --use-mock-keychain --user-data-dir=/var/folders/5g/x7dkx80s0ld9g46drv7n3v98nzmxpb/T/.org.chromium.Chromium.tcZ3aD data:,
+[2.812][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[2.878][INFO]: RESPONSE InitSession {
+   "acceptSslCerts": true,
+   "applicationCacheEnabled": false,
+   "browserConnectionEnabled": false,
+   "browserName": "chrome",
+   "chrome": {
+      "chromedriverVersion": "2.33.506106 (8a06c39c4582fbfbab6966dbb1c38a9173bfb1a2)",
+      "userDataDir": "/var/folders/5g/x7dkx80s0ld9g46drv7n3v98nzmxpb/T/.org.chromium.Chromium.tcZ3aD"
+   },
+   "cssSelectorsEnabled": true,
+   "databaseEnabled": false,
+   "handlesAlerts": true,
+   "hasTouchScreen": false,
+   "javascriptEnabled": true,
+   "locationContextEnabled": true,
+   "mobileEmulationEnabled": false,
+   "nativeEvents": true,
+   "networkConnectionEnabled": false,
+   "pageLoadStrategy": "normal",
+   "platform": "Mac OS X",
+   "rotatable": false,
+   "setWindowRect": true,
+   "takesHeapSnapshot": true,
+   "~~~": "..."
+}
+[2.977][INFO]: COMMAND Navigate {
+   "url": "http://25.211.140.196:8080"
+}
+[2.977][INFO]: Waiting for pending navigations...
+[3.006][INFO]: Done waiting for pending navigations. Status: ok
+[5.219][INFO]: Waiting for pending navigations...
+[9.119][INFO]: Done waiting for pending navigations. Status: ok
+[9.119][INFO]: RESPONSE Navigate
+[10.280][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": ".//*[@id='navbar-collapse']/ul//span[contains(text(),'Account')]"
+}
+[10.280][INFO]: Waiting for pending navigations...
+[10.292][INFO]: Done waiting for pending navigations. Status: ok
+[10.326][INFO]: Waiting for pending navigations...
+[10.328][INFO]: Done waiting for pending navigations. Status: ok
+[10.328][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-1"
+}
+[10.350][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.24746319050980325-1"
+}
+[10.350][INFO]: Waiting for pending navigations...
+[10.351][INFO]: Done waiting for pending navigations. Status: ok
+[10.375][INFO]: Waiting for pending navigations...
+[10.375][INFO]: Done waiting for pending navigations. Status: ok
+[10.375][INFO]: RESPONSE IsElementDisplayed true
+[10.382][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": ".//*[@id='navbar-collapse']/ul//span[contains(text(),'Account')]"
+}
+[10.382][INFO]: Waiting for pending navigations...
+[10.383][INFO]: Done waiting for pending navigations. Status: ok
+[10.390][INFO]: Waiting for pending navigations...
+[10.390][INFO]: Done waiting for pending navigations. Status: ok
+[10.390][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-1"
+}
+[10.395][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-1"
+}
+[10.395][INFO]: Waiting for pending navigations...
+[10.396][INFO]: Done waiting for pending navigations. Status: ok
+[10.406][INFO]: Waiting for pending navigations...
+[10.409][INFO]: Done waiting for pending navigations. Status: ok
+[10.409][INFO]: RESPONSE IsElementEnabled true
+[10.414][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": ".//*[@id='navbar-collapse']/ul//span[contains(text(),'Account')]"
+}
+[10.414][INFO]: Waiting for pending navigations...
+[10.415][INFO]: Done waiting for pending navigations. Status: ok
+[10.421][INFO]: Waiting for pending navigations...
+[10.422][INFO]: Done waiting for pending navigations. Status: ok
+[10.422][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-1"
+}
+[10.426][INFO]: COMMAND ClickElement {
+   "id": "0.24746319050980325-1"
+}
+[10.426][INFO]: Waiting for pending navigations...
+[10.427][INFO]: Done waiting for pending navigations. Status: ok
+[10.536][INFO]: Waiting for pending navigations...
+[10.537][INFO]: Done waiting for pending navigations. Status: ok
+[10.537][INFO]: RESPONSE ClickElement
+[10.547][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": ".//*[@id='navbar-collapse']/ul//span[contains(text(),'Account')]//following::ul//span[contains(text(),'Register')]"
+}
+[10.547][INFO]: Waiting for pending navigations...
+[10.576][INFO]: Done waiting for pending navigations. Status: ok
+[10.684][INFO]: Waiting for pending navigations...
+[10.686][INFO]: Done waiting for pending navigations. Status: ok
+[10.686][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-2"
+}
+[10.689][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.24746319050980325-2"
+}
+[10.689][INFO]: Waiting for pending navigations...
+[10.690][INFO]: Done waiting for pending navigations. Status: ok
+[10.713][INFO]: Waiting for pending navigations...
+[10.714][INFO]: Done waiting for pending navigations. Status: ok
+[10.714][INFO]: RESPONSE IsElementDisplayed true
+[10.722][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": ".//*[@id='navbar-collapse']/ul//span[contains(text(),'Account')]//following::ul//span[contains(text(),'Register')]"
+}
+[10.722][INFO]: Waiting for pending navigations...
+[10.723][INFO]: Done waiting for pending navigations. Status: ok
+[10.730][INFO]: Waiting for pending navigations...
+[10.731][INFO]: Done waiting for pending navigations. Status: ok
+[10.731][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-2"
+}
+[10.735][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-2"
+}
+[10.735][INFO]: Waiting for pending navigations...
+[10.736][INFO]: Done waiting for pending navigations. Status: ok
+[10.747][INFO]: Waiting for pending navigations...
+[10.747][INFO]: Done waiting for pending navigations. Status: ok
+[10.747][INFO]: RESPONSE IsElementEnabled true
+[10.753][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": ".//*[@id='navbar-collapse']/ul//span[contains(text(),'Account')]//following::ul//span[contains(text(),'Register')]"
+}
+[10.753][INFO]: Waiting for pending navigations...
+[10.754][INFO]: Done waiting for pending navigations. Status: ok
+[10.761][INFO]: Waiting for pending navigations...
+[10.762][INFO]: Done waiting for pending navigations. Status: ok
+[10.762][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-2"
+}
+[10.766][INFO]: COMMAND ClickElement {
+   "id": "0.24746319050980325-2"
+}
+[10.766][INFO]: Waiting for pending navigations...
+[10.768][INFO]: Done waiting for pending navigations. Status: ok
+[10.873][INFO]: Waiting for pending navigations...
+[10.896][INFO]: Done waiting for pending navigations. Status: ok
+[10.896][INFO]: RESPONSE ClickElement
+[10.902][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//label[text()='Login']"
+}
+[10.902][INFO]: Waiting for pending navigations...
+[11.227][INFO]: Done waiting for pending navigations. Status: ok
+[11.265][INFO]: Waiting for pending navigations...
+[11.287][INFO]: Done waiting for pending navigations. Status: ok
+[11.287][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-3"
+}
+[11.294][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-3"
+}
+[11.295][INFO]: Waiting for pending navigations...
+[11.312][INFO]: Done waiting for pending navigations. Status: ok
+[11.416][INFO]: Waiting for pending navigations...
+[11.421][INFO]: Done waiting for pending navigations. Status: ok
+[11.421][INFO]: RESPONSE IsElementEnabled true
+[11.425][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//input[@name='login']"
+}
+[11.425][INFO]: Waiting for pending navigations...
+[11.430][INFO]: Done waiting for pending navigations. Status: ok
+[11.482][INFO]: Waiting for pending navigations...
+[11.485][INFO]: Done waiting for pending navigations. Status: ok
+[11.485][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-4"
+}
+[11.488][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-4"
+}
+[11.488][INFO]: Waiting for pending navigations...
+[11.490][INFO]: Done waiting for pending navigations. Status: ok
+[11.507][INFO]: Waiting for pending navigations...
+[11.507][INFO]: Done waiting for pending navigations. Status: ok
+[11.507][INFO]: RESPONSE IsElementEnabled true
+[11.512][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//label[text()='E-mail']"
+}
+[11.512][INFO]: Waiting for pending navigations...
+[11.516][INFO]: Done waiting for pending navigations. Status: ok
+[11.549][INFO]: Waiting for pending navigations...
+[11.550][INFO]: Done waiting for pending navigations. Status: ok
+[11.550][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-5"
+}
+[11.553][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-5"
+}
+[11.553][INFO]: Waiting for pending navigations...
+[11.554][INFO]: Done waiting for pending navigations. Status: ok
+[11.566][INFO]: Waiting for pending navigations...
+[11.567][INFO]: Done waiting for pending navigations. Status: ok
+[11.567][INFO]: RESPONSE IsElementEnabled true
+[11.571][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//input[@name='email']"
+}
+[11.571][INFO]: Waiting for pending navigations...
+[11.572][INFO]: Done waiting for pending navigations. Status: ok
+[11.603][INFO]: Waiting for pending navigations...
+[11.606][INFO]: Done waiting for pending navigations. Status: ok
+[11.606][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-6"
+}
+[11.610][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-6"
+}
+[11.610][INFO]: Waiting for pending navigations...
+[11.611][INFO]: Done waiting for pending navigations. Status: ok
+[11.623][INFO]: Waiting for pending navigations...
+[11.624][INFO]: Done waiting for pending navigations. Status: ok
+[11.624][INFO]: RESPONSE IsElementEnabled true
+[11.627][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//label[text()='New password']"
+}
+[11.627][INFO]: Waiting for pending navigations...
+[11.628][INFO]: Done waiting for pending navigations. Status: ok
+[11.645][INFO]: Waiting for pending navigations...
+[11.646][INFO]: Done waiting for pending navigations. Status: ok
+[11.646][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-7"
+}
+[11.649][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-7"
+}
+[11.649][INFO]: Waiting for pending navigations...
+[11.650][INFO]: Done waiting for pending navigations. Status: ok
+[11.664][INFO]: Waiting for pending navigations...
+[11.664][INFO]: Done waiting for pending navigations. Status: ok
+[11.664][INFO]: RESPONSE IsElementEnabled true
+[11.668][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//input[@name='password']"
+}
+[11.668][INFO]: Waiting for pending navigations...
+[11.669][INFO]: Done waiting for pending navigations. Status: ok
+[11.698][INFO]: Waiting for pending navigations...
+[11.703][INFO]: Done waiting for pending navigations. Status: ok
+[11.703][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-8"
+}
+[11.707][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-8"
+}
+[11.707][INFO]: Waiting for pending navigations...
+[11.708][INFO]: Done waiting for pending navigations. Status: ok
+[11.719][INFO]: Waiting for pending navigations...
+[11.720][INFO]: Done waiting for pending navigations. Status: ok
+[11.720][INFO]: RESPONSE IsElementEnabled true
+[11.723][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//label[text()='New password confirmation']"
+}
+[11.723][INFO]: Waiting for pending navigations...
+[11.724][INFO]: Done waiting for pending navigations. Status: ok
+[11.745][INFO]: Waiting for pending navigations...
+[11.748][INFO]: Done waiting for pending navigations. Status: ok
+[11.748][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-9"
+}
+[11.752][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-9"
+}
+[11.752][INFO]: Waiting for pending navigations...
+[11.753][INFO]: Done waiting for pending navigations. Status: ok
+[11.765][INFO]: Waiting for pending navigations...
+[11.766][INFO]: Done waiting for pending navigations. Status: ok
+[11.766][INFO]: RESPONSE IsElementEnabled true
+[11.770][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//input[@name='confirmPassword']"
+}
+[11.770][INFO]: Waiting for pending navigations...
+[11.771][INFO]: Done waiting for pending navigations. Status: ok
+[11.806][INFO]: Waiting for pending navigations...
+[11.807][INFO]: Done waiting for pending navigations. Status: ok
+[11.807][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-10"
+}
+[11.811][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-10"
+}
+[11.811][INFO]: Waiting for pending navigations...
+[11.812][INFO]: Done waiting for pending navigations. Status: ok
+[11.824][INFO]: Waiting for pending navigations...
+[11.830][INFO]: Done waiting for pending navigations. Status: ok
+[11.830][INFO]: RESPONSE IsElementEnabled true
+[11.834][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[text() = 'Registration']/following-sibling::form//button[text()='Register']"
+}
+[11.834][INFO]: Waiting for pending navigations...
+[11.835][INFO]: Done waiting for pending navigations. Status: ok
+[11.863][INFO]: Waiting for pending navigations...
+[11.864][INFO]: Done waiting for pending navigations. Status: ok
+[11.864][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-11"
+}
+[11.868][INFO]: COMMAND IsElementEnabled {
+   "id": "0.24746319050980325-11"
+}
+[11.868][INFO]: Waiting for pending navigations...
+[11.869][INFO]: Done waiting for pending navigations. Status: ok
+[12.076][INFO]: Waiting for pending navigations...
+[12.077][INFO]: Done waiting for pending navigations. Status: ok
+[12.077][INFO]: RESPONSE IsElementEnabled false
+[12.080][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "(//h1[text() = 'Registration']/following-sibling::div)[6]"
+}
+[12.080][INFO]: Waiting for pending navigations...
+[12.081][INFO]: Done waiting for pending navigations. Status: ok
+[12.216][INFO]: Waiting for pending navigations...
+[12.219][INFO]: Done waiting for pending navigations. Status: ok
+[12.219][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-12"
+}
+[12.222][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.24746319050980325-12"
+}
+[12.222][INFO]: Waiting for pending navigations...
+[12.223][INFO]: Done waiting for pending navigations. Status: ok
+[12.272][INFO]: Waiting for pending navigations...
+[12.275][INFO]: Done waiting for pending navigations. Status: ok
+[12.275][INFO]: RESPONSE IsElementDisplayed true
+[12.279][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "(//h1[text() = 'Registration']/following-sibling::div)[6]"
+}
+[12.279][INFO]: Waiting for pending navigations...
+[12.281][INFO]: Done waiting for pending navigations. Status: ok
+[12.297][INFO]: Waiting for pending navigations...
+[12.298][INFO]: Done waiting for pending navigations. Status: ok
+[12.298][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.24746319050980325-12"
+}
+[12.303][INFO]: COMMAND GetElementText {
+   "id": "0.24746319050980325-12"
+}
+[12.303][INFO]: Waiting for pending navigations...
+[12.307][INFO]: Done waiting for pending navigations. Status: ok
+[12.346][INFO]: Waiting for pending navigations...
+[12.347][INFO]: Done waiting for pending navigations. Status: ok
+[12.347][INFO]: RESPONSE GetElementText "Click here to login"
+[12.351][INFO]: COMMAND Screenshot {
+
+}
+[12.351][INFO]: Waiting for pending navigations...
+[12.353][INFO]: Done waiting for pending navigations. Status: ok
+[13.887][INFO]: Waiting for pending navigations...
+[13.890][INFO]: Done waiting for pending navigations. Status: ok
+[13.890][INFO]: RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAACWAAAATWCAIAAAAuawqRAAAgAElEQVR4nOzde3Bd1Z0v+O9vrb33OUfnoZclWbZkW8aSbWHs2AECBHCADoGGBOh0uOlMptJVndvVM5NMddfcm+6upKrvzO1MKt2duTPT3JnM7fS96b4k0JDkQgcCdscmYMBgjI3BDyzZli3Jlo7eO..."
+[13.966][INFO]: COMMAND CloseWindow {
+
+}
+[14.417][INFO]: RESPONSE CloseWindow
