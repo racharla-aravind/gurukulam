@@ -1,6 +1,6 @@
 ## How to clone the repository
 
-git clone https://github.com/racharla-aravind/gurukula.git
+https://github.com/racharla-aravind/gurukulam.git
 
 ## Prerequisites to run the tests
  - Java 1.8
