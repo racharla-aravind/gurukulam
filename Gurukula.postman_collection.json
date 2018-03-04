@@ -1,0 +1,133 @@
+{
+	"info": {
+		"name": "Gurukula",
+		"_postman_id": "f77eb88a-3ade-7e7c-8a61-5e0726d9d5c1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LoginTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "3af7764e-c7a0-471c-a7ff-ca6eaa00233c"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Cookie",
+						"value": "NG_TRANSLATE_LANG_KEY=%22en%22; JSESSIONID=00BDC3D876FCE103E0B3066D484E5EA6; CSRF-TOKEN=3af7764e-c7a0-471c-a7ff-ca6eaa00233c"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "j_username",
+							"value": "admin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "j_password",
+							"value": "admin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "remember-me",
+							"value": "true",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "submit",
+							"value": "Login",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://25.211.140.196:8080/api/authentication?cacheBuster=1520200070024",
+					"protocol": "http",
+					"host": [
+						"25",
+						"211",
+						"140",
+						"196"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authentication"
+					],
+					"query": [
+						{
+							"key": "cacheBuster",
+							"value": "1520200070024",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ResetYourPasswordTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "3d799fc7-1846-4f6f-85e6-743d990a37ff"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Cookie",
+						"value": "NG_TRANSLATE_LANG_KEY=%22en%22; JSESSIONID=00BDC3D876FCE103E0B3066D484E5EA6; CSRF-TOKEN=3af7764e-c7a0-471c-a7ff-ca6eaa00233c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "test@example.com"
+				},
+				"url": {
+					"raw": "http://25.211.140.196:8080/api/account/reset_password/init?cacheBuster=1520200070024",
+					"protocol": "http",
+					"host": [
+						"25",
+						"211",
+						"140",
+						"196"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account",
+						"reset_password",
+						"init"
+					],
+					"query": [
+						{
+							"key": "cacheBuster",
+							"value": "1520200070024",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
