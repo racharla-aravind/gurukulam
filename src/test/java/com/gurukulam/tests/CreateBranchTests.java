@@ -20,7 +20,7 @@ import com.gurukulam.pages.HomePage;
 import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -38,7 +38,7 @@ public class CreateBranchTests {
 	BranchesPage branchesPage = null;
 	CreateOrEditBranchPage createOrEditBranchPage = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	
@@ -49,6 +49,8 @@ public class CreateBranchTests {
 	public void setup() {
 		try {
 			input = Utilities.loadProperties();
+			if (input == null)
+				fail("Error with property file");
 			prop.load(input);
 			driver = GetDriver.getDriver();
 
@@ -578,6 +580,10 @@ public class CreateBranchTests {
 			branchesPage.clickOnCreateNewBranch();
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
+			
+			branchesPage.searchForABranch(name);
+			boolean flag = branchesPage.isBranchRecordDisplayed(name);
+			assertTrue(flag);
 				
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
@@ -607,6 +613,10 @@ public class CreateBranchTests {
 			branchesPage.clickOnCreateNewBranch();
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
+			
+			branchesPage.searchForABranch(name);
+			boolean flag = branchesPage.isBranchRecordDisplayed(name);
+			assertTrue(flag);
 				
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
@@ -636,7 +646,11 @@ public class CreateBranchTests {
 			branchesPage.clickOnCreateNewBranch();
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
-				
+			
+			branchesPage.searchForABranch(name);
+			boolean flag = branchesPage.isBranchRecordDisplayed(name);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -666,6 +680,10 @@ public class CreateBranchTests {
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
 				
+			branchesPage.searchForABranch(name);
+			boolean flag = branchesPage.isBranchRecordDisplayed(name);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -695,6 +713,10 @@ public class CreateBranchTests {
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
 				
+			branchesPage.searchForABranch(name);
+			boolean flag = branchesPage.isBranchRecordDisplayed(name);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -723,7 +745,11 @@ public class CreateBranchTests {
 			branchesPage.clickOnCreateNewBranch();
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
-				
+			
+			branchesPage.searchForABranch(code);
+			boolean flag = branchesPage.isBranchRecordDisplayed(code);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -752,7 +778,11 @@ public class CreateBranchTests {
 			branchesPage.clickOnCreateNewBranch();
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
-				
+			
+			branchesPage.searchForABranch(code);
+			boolean flag = branchesPage.isBranchRecordDisplayed(code);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -782,6 +812,10 @@ public class CreateBranchTests {
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
 				
+			branchesPage.searchForABranch(code);
+			boolean flag = branchesPage.isBranchRecordDisplayed(code);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -811,6 +845,10 @@ public class CreateBranchTests {
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
 				
+			branchesPage.searchForABranch(code);
+			boolean flag = branchesPage.isBranchRecordDisplayed(code);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -840,6 +878,10 @@ public class CreateBranchTests {
 			createOrEditBranchPage.setCreateOrEditBranchDetails(name, code);
 			createOrEditBranchPage.clickOnSave();
 				
+			branchesPage.searchForABranch(code);
+			boolean flag = branchesPage.isBranchRecordDisplayed(code);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -853,6 +895,8 @@ public class CreateBranchTests {
 			if (isAuthenticated)
 				navigationBar.clickOnLogout();
 			driver.close();
+			if(input!=null)
+				input.close();
 		} catch (Exception e) {
 			Log.error(e.getMessage());
 		}

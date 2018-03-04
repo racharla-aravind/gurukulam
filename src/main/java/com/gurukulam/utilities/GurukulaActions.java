@@ -1,14 +1,13 @@
 package com.gurukulam.utilities;
 
-import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Actions {
+public class GurukulaActions {
 	
 	/**
 	 * This method is to perform a click operation on the web element
@@ -16,8 +15,8 @@ public class Actions {
 	 * @param element
 	 */
 	public void clickOnElement(WebDriver driver, WebElement element){
-		WebDriverWait myWait = new WebDriverWait(driver, 20);
-		myWait.until(ExpectedConditions.elementToBeClickable(element));
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 		Log.info("Performed a click operation on the webelement");
 	}
@@ -62,8 +61,8 @@ public class Actions {
 	 * @param element
 	 */
 	public void waitForElementVisible(WebDriver driver, WebElement element){
-		WebDriverWait myWait = new WebDriverWait(driver, 30);
-		myWait.until(ExpectedConditions.visibilityOf(element));
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
 	/**
@@ -74,8 +73,8 @@ public class Actions {
 	 */
 	public void setTextFieldValue(WebDriver driver, WebElement element, String testData){
 		try {
-			WebDriverWait myWait = new WebDriverWait(driver, 20);
-			myWait.until(ExpectedConditions.visibilityOf(element));
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			wait.until(ExpectedConditions.visibilityOf(element));
 			Log.info("Performing an action set test data value " + testData + " to a text field");
 			element.sendKeys(testData);
 			Log.info("Performed an action setting test data value " + testData + " to a text field");
@@ -93,8 +92,8 @@ public class Actions {
 	 */
 	public void clearTextFieldValue(WebDriver driver, WebElement element){
 		try {
-			WebDriverWait myWait = new WebDriverWait(driver, 20);
-			myWait.until(ExpectedConditions.visibilityOf(element));
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			wait.until(ExpectedConditions.visibilityOf(element));
 			Log.info("Performing an action clear test data value from a text field");
 			element.clear();
 			Log.info("Performed an action clearing test data value from a text field");
@@ -112,8 +111,8 @@ public class Actions {
 	 */
 	public String getText(WebDriver driver, WebElement element){
 		try {
-			WebDriverWait myWait = new WebDriverWait(driver, 20);
-			myWait.until(ExpectedConditions.visibilityOf(element));
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			wait.until(ExpectedConditions.visibilityOf(element));
 			Log.info("Performing an action get a text value of an element");
 			String text = element.getText();
 			Log.info("Performed an action getting a text value of an element and text value is returning as " + text);
@@ -152,5 +151,19 @@ public class Actions {
 	public void waitForFewSeconds(WebDriver driver) throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(5000);
+	}
+	
+	/**
+	 * This method is to check for the alert display
+	 * @param driver
+	 * @return
+	 */
+	public boolean isAlertDisplayed(WebDriver driver) {
+		try {
+			driver.switchTo().alert();
+			return true;
+		} catch (NoAlertPresentException Ex) {
+			return false;
+		}
 	}
 }

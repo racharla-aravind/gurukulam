@@ -8311,3 +8311,21 @@ Session ID: 8cbdd3cf358e3894b34500caf5c3162f
 2018-03-04 12:09:53,946 INFO  [Log] Performed an action getting a text value of an element and text value is returning as Click here to login 
 2018-03-04 12:09:53,946 INFO  [Log] Expected Text = Click here to login and Actual Text = Click here to login 
 2018-03-04 12:09:53,946 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXX 
+2018-03-04 16:34:20,073 INFO  [Log] Home Page has been initiated 
+2018-03-04 16:34:20,084 INFO  [Log] Login Page has been initiated 
+2018-03-04 16:34:20,084 INFO  [Log] **************************************************************************************** 
+2018-03-04 16:34:20,084 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 sampleSecurityCheck       $$$$$$$$$$$$$$$$$$$$$$ 
+2018-03-04 16:34:20,085 INFO  [Log] **************************************************************************************** 
+2018-03-04 16:34:21,652 INFO  [Log] Performed a click operation on the webelement 
+2018-03-04 16:34:21,652 INFO  [Log] Clicked on Login link 
+2018-03-04 16:34:22,005 INFO  [Log] Performing an action clear test data value from a text field 
+2018-03-04 16:34:22,083 INFO  [Log] Performed an action clearing test data value from a text field 
+2018-03-04 16:34:22,112 INFO  [Log] Performing an action set test data value <script>   alert ('Hello Test!')  </script> to a text field 
+2018-03-04 16:34:22,576 INFO  [Log] Performed an action setting test data value <script>   alert ('Hello Test!')  </script> to a text field 
+2018-03-04 16:34:22,627 INFO  [Log] Performing an action clear test data value from a text field 
+2018-03-04 16:34:22,672 INFO  [Log] Performed an action clearing test data value from a text field 
+2018-03-04 16:34:22,699 INFO  [Log] Performing an action set test data value <script>   alert ('Hello Test!')  </script> to a text field 
+2018-03-04 16:34:23,162 INFO  [Log] Performed an action setting test data value <script>   alert ('Hello Test!')  </script> to a text field 
+2018-03-04 16:34:23,360 INFO  [Log] Performed a click operation on the webelement 
+2018-03-04 16:34:23,360 INFO  [Log] Clicked on Authenticate button 
+2018-03-04 16:34:23,376 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXX 

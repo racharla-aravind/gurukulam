@@ -22,7 +22,7 @@ import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
 import com.gurukulam.pages.StaffPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -41,7 +41,7 @@ public class CreateStaffTests {
 	StaffPage staffPage = null;
 	CreateOrEditStaffPage createOrEditStaffPage = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	
@@ -323,6 +323,10 @@ public class CreateStaffTests {
 			staffPage.clickOnCreateNewStaff();
 			createOrEditStaffPage.setCreateOrEditStaffDetails(staffName, branch);
 			createOrEditStaffPage.clickOnSave();
+			
+			staffPage.searchForAStaff(staffName);
+			boolean flag = staffPage.isStaffRecordDisplayed(staffName);
+			assertTrue(flag);
 				
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
@@ -356,6 +360,10 @@ public class CreateStaffTests {
 			staffPage.clickOnCreateNewStaff();
 			createOrEditStaffPage.setCreateOrEditStaffDetails(staffName, branch);
 			createOrEditStaffPage.clickOnSave();
+			
+			staffPage.searchForAStaff(staffName);
+			boolean flag = staffPage.isStaffRecordDisplayed(staffName);
+			assertTrue(flag);
 				
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
@@ -390,6 +398,10 @@ public class CreateStaffTests {
 			createOrEditStaffPage.setCreateOrEditStaffDetails(staffName, branch);
 			createOrEditStaffPage.clickOnSave();
 				
+			staffPage.searchForAStaff(staffName);
+			boolean flag = staffPage.isStaffRecordDisplayed(staffName);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -423,6 +435,10 @@ public class CreateStaffTests {
 			createOrEditStaffPage.setCreateOrEditStaffDetails(staffName, branch);
 			createOrEditStaffPage.clickOnSave();
 				
+			staffPage.searchForAStaff(staffName);
+			boolean flag = staffPage.isStaffRecordDisplayed(staffName);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -456,6 +472,10 @@ public class CreateStaffTests {
 			createOrEditStaffPage.setCreateOrEditStaffDetails(staffName, branch);
 			createOrEditStaffPage.clickOnSave();
 				
+			staffPage.searchForAStaff(staffName);
+			boolean flag = staffPage.isStaffRecordDisplayed(staffName);
+			assertTrue(flag);
+			
 			Log.endTestCase(testCaseName);
 		} catch (Exception e) {
 			fail(e.getMessage());
@@ -469,6 +489,7 @@ public class CreateStaffTests {
 			if (isAuthenticated)
 				navigationBar.clickOnLogout();
 			driver.close();
+			Utilities.closePropertiesFile(input);
 		} catch (Exception e) {
 			Log.error(e.getMessage());
 		}

@@ -21,7 +21,7 @@ import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
 import com.gurukulam.pages.StaffPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -42,7 +42,7 @@ public class DeleteStaffTests {
 	CreateOrEditStaffPage createOrEditStaffPage = null;
 	DeleteBranchOrStaffPage deleteStaffPage = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	
@@ -53,6 +53,8 @@ public class DeleteStaffTests {
 	public void setup() {
 		try {
 			input = Utilities.loadProperties();
+			if (input == null)
+				fail("Error with property file");
 			prop.load(input);
 			driver = GetDriver.getDriver();
 
@@ -226,6 +228,8 @@ public class DeleteStaffTests {
 			if (isAuthenticated)
 				navigationBar.clickOnLogout();
 			driver.close();
+			if(input!=null)
+				input.close();
 		} catch (Exception e) {
 			Log.error(e.getMessage());
 		}

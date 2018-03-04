@@ -20,7 +20,7 @@ import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
 import com.gurukulam.pages.StaffPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -40,7 +40,7 @@ public class SearchForStaffTests {
 	StaffPage staffPage = null;
 	CreateOrEditStaffPage createOrEditStaffPage = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	
@@ -215,6 +215,7 @@ public class SearchForStaffTests {
 			Utilities.takeSnapShot(driver, "SearchStaffTests_" + testCaseName);
 			if (isAuthenticated)
 				navigationBar.clickOnLogout();
+			Utilities.closePropertiesFile(input);
 			driver.close();
 		} catch (Exception e) {
 			Log.error(e.getMessage());

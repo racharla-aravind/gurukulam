@@ -6,12 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.Log;
 
 public class BranchesPage {
 	WebDriver driver = null;
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	
 	@FindBy(xpath="//h2[text() = 'Branches']/following-sibling::div//button/span[text()='Create a new Branch']")
 	public WebElement createNewBranchBtn;
@@ -88,6 +88,7 @@ public class BranchesPage {
 	 * @throws InterruptedException 
 	 */
 	public void searchForABranch(String queryString) throws InterruptedException{
+		performAction.waitForFewSeconds(driver);
 		this.clearQueryFieldValue();
 		this.setQuery(queryString);
 		this.clickOnSearchBranch();

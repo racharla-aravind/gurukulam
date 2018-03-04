@@ -21,7 +21,7 @@ import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
 import com.gurukulam.pages.StaffPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -42,7 +42,7 @@ public class DeleteBranchTests {
 	CreateOrEditStaffPage createOrEditStaffPage = null;
 	DeleteBranchOrStaffPage deleteBranchPage = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	
@@ -211,6 +211,7 @@ public class DeleteBranchTests {
 			if (isAuthenticated)
 				navigationBar.clickOnLogout();
 			driver.close();
+			Utilities.closePropertiesFile(input);
 		} catch (Exception e) {
 			Log.error(e.getMessage());
 		}

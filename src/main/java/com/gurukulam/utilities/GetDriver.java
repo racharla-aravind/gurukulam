@@ -5,15 +5,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.gurukulam.utilities.OsCheck;
@@ -41,12 +37,6 @@ public class GetDriver {
     		}
     		if (browserName.toLowerCase().contains("safari")){
     			driver = new SafariDriver();
-    		}
-    		if (browserName.toLowerCase().contains("internet")) {
-                DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-                caps.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-    			System.setProperty("webdriver.ie.driver", driverPath);
-    			driver = new InternetExplorerDriver(caps);
     		}
     		if (browserName.toLowerCase().contains("chrome")) {
     			System.setProperty("webdriver.chrome.driver", driverPath);
@@ -81,14 +71,6 @@ public class GetDriver {
 				if(browserName.toLowerCase().contains("chrome")){
 					path = copyFileToTemp("drivers/chromedriver.exe", "chromedriver", ".exe" );
 				}
-				if(browserName.toLowerCase().contains("internet") || browserName.toLowerCase().contains("ie")){
-	    			if(OsCheck.getOSArch().equalsIgnoreCase("64")){
-						path = copyFileToTemp("drivers/IEDriverServer-64.exe", "IEDriverServer-64", ".exe" );
-	    			}else{
-						path = copyFileToTemp("drivers/IEDriverServer-32.exe", "IEDriverServer-32", ".exe" );
-	    			}
-				}
-    			
     			break;
     		case MacOS:
 				if(browserName.toLowerCase().contains("chrome")){

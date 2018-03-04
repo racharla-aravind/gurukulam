@@ -4,13 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.Log;
 
 public class LoginPage {
 	
 	WebDriver driver = null;
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	
 	@FindBy(xpath="//h1[text() = 'Authentication']/following-sibling::div[@class='alert alert-danger ng-scope']")
 	public WebElement loginErrorMSg;

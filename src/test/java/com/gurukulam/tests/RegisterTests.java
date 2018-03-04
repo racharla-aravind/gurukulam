@@ -17,7 +17,7 @@ import com.gurukulam.pages.HomePage;
 import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -31,7 +31,7 @@ public class RegisterTests {
 	RegistrationPage registrationPage = null;
 	NavigationBar navigationBar = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	String testCaseName = null;
@@ -863,6 +863,7 @@ public class RegisterTests {
 		try {
 			Utilities.takeSnapShot(driver, "RegisterTests_" + testCaseName);
 			driver.close();
+			Utilities.closePropertiesFile(input);
 		} catch (Exception e) {
 			Log.error(e.getMessage());
 		}

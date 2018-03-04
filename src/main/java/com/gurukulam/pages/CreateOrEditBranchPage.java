@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.Log;
 
 public class CreateOrEditBranchPage {
 	WebDriver driver = null;
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	
 	@FindBy(xpath=".//*[@id='saveBranchModal']//form//label[text()='Name']")
 	public WebElement nameLabel;

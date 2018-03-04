@@ -17,7 +17,7 @@ import com.gurukulam.pages.LoginPage;
 import com.gurukulam.pages.NavigationBar;
 import com.gurukulam.pages.RegistrationPage;
 import com.gurukulam.pages.ResetYourPasswordPage;
-import com.gurukulam.utilities.Actions;
+import com.gurukulam.utilities.GurukulaActions;
 import com.gurukulam.utilities.GetDriver;
 import com.gurukulam.utilities.Log;
 import com.gurukulam.utilities.TestDataProvider;
@@ -34,7 +34,7 @@ public class LoginTests {
 	AuthenticatedPage authenticatedPage = null;
 	ResetYourPasswordPage resetYourPasswordPage = null;
 	
-	Actions performAction = new Actions();
+	GurukulaActions performAction = new GurukulaActions();
 	Properties prop = new Properties();
 	TestDataProvider testDataProvider = new TestDataProvider();
 	
@@ -300,6 +300,7 @@ public class LoginTests {
 			if (isAuthenticated)
 				navigationBar.clickOnLogout();
 			driver.close();
+			Utilities.closePropertiesFile(input);
 		} catch (Exception e) {
 			Log.error(e.getMessage());
 		}
